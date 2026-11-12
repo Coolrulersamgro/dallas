@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Dallas",
+    "slug": "dallas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.coolrulersam.dallas"
+    },
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
