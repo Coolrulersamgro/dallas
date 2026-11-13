@@ -34,6 +34,9 @@ jobs:
       - name: Install JavaScript dependencies
         run: npm install
 
+      - name: Validate Expo Android bundle
+        run: npx expo export --platform android --output-dir dist
+
       - name: Generate app icon PNG from logo
         run: node -e "require('sharp')('assets/dallas-logo.svg').resize(512,512).png().toFile('assets/dallas-icon.png')"
 
