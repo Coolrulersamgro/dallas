@@ -12,7 +12,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/dallas-icon.png",
         "backgroundColor": "#073D2A"
-      }
+      },
+      "versionCode": 2
     },
     "extra": {
       "eas": {
