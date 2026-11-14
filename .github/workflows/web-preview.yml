@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Expo web runtime
+        run: npx expo install @expo/metro-runtime
+
       - name: Export Dallas for web
         run: npx expo export --platform web --output-dir dist
 
