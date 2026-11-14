@@ -25,6 +25,7 @@
     },
     "experiments": {
       "baseUrl": "/dallas"
-    }
+    },
+    "description": "Dallas business finance and accounting app"
   }
 }
