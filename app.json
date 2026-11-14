@@ -21,7 +21,13 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static"
+      "output": "static",
+      "name": "Dallas Business Finance",
+      "shortName": "Dallas",
+      "description": "Business finance and accounting, available offline.",
+      "themeColor": "#123B2D",
+      "backgroundColor": "#F5F7F2",
+      "display": "standalone"
     },
     "experiments": {
       "baseUrl": "/dallas"
