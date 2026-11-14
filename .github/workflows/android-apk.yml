@@ -12,6 +12,9 @@ on:
       - '.github/workflows/android-apk.yml'
       - 'assets/dallas-logo.svg'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build release APK
@@ -49,10 +52,11 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: Dallas-Android-APK
-          path: android/app/build/outputs/apk/release/app-release.apk
-          if-no-files-found: error
-          retention-days: 14
+      - name: Publish direct APK download
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="dallas-apk-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" android/app/build/outputs/apk/release/app-release.apk \
+            --title "Dallas Android APK - Build ${GITHUB_RUN_NUMBER}" \
+            --notes "Install the APK directly on Android. This is a standalone APK file; no ZIP extraction is required."
