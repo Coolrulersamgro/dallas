@@ -18,6 +18,13 @@
       "eas": {
         "projectId": ""
       }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "experiments": {
+      "baseUrl": "/dallas"
     }
   }
 }
